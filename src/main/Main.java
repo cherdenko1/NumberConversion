@@ -11,6 +11,7 @@ public class Main {
 		//Testing
 		System.out.printf("Binary form of 100 = %s%n", decimalToBinary(100));
 		System.out.printf("Decimal form of 1100100 = %d%n", binaryToDecimal("1100100"));
+		System.out.printf("Octal form of 100 = %s%n", decimalToOctal(69));
 	}
 	
 	/* Converts decimal(int) to binary(String)
@@ -34,8 +35,6 @@ public class Main {
 	}
 	
 	/* Converts binary(String) to decimal(int)
-	 * Parameters: String
-	 * Returns: int
 	 */
 	static int binaryToDecimal(String binary) {
 		int decimal = 0;
@@ -47,5 +46,24 @@ public class Main {
 		return decimal;
 	}
 	
-	
+	/*
+	 * Converts decimal(int) to octal(String)
+	 */
+	static String decimalToOctal(int decimal) {
+		String octal = "";
+		
+		while(true) {
+			
+			octal = (decimal % 8) + octal;
+			decimal /= 8;
+			
+			if(decimal / 8 == 0) {
+				
+				octal = (decimal % 8) + octal;
+				break;
+			}
+		}
+		
+		return octal;
+	}
 }
