@@ -2,6 +2,7 @@
 Convertion of numbers to any base and vice-versa
 
 Code can be found on src/Main.java
+This project was made on EclipseIDE.
 
 Methods:
 
